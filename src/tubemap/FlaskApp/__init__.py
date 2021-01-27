@@ -11,4 +11,6 @@ root_path = None
 
 @app.route('/')
 def hello_world():
-    return 'Hello, to the tube map!'
+    return render_template('tubemap.html')
+if __name__ == "__main__":
+    app.run()

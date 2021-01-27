@@ -7,10 +7,11 @@ import os
 import sys
 
 app = Flask(__name__)
-root_path = None
 
-@app.route('/')
-def hello_world():
+@app.route("/")
+def index_page():
+    return "Hi from Azure"
+
+@app.route('/map')
+def tube_map():
     return render_template('tubemap.html')
-if __name__ == "__main__":
-    app.run()

@@ -11,4 +11,4 @@ root_path = None
 
 @app.route('/')
 def hello_world():
-    return 'Hello, to the qrcode generator!'
+    return 'Hello, to the tube map!'

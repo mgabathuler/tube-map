@@ -13,7 +13,7 @@ var map = d3
     left: 100,
   })
   .on('click', function (name) {
-    console.log(name);
+    displayStationInfo(name);
   });
 
 d3.json('https://raw.githubusercontent.com/johnwalley/d3-tube-map/v1.5.0/example/pubs.json').then(function (data) {

@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="./tubeMap.css" />
+    <script src="https://d3js.org/d3.v6.js"></script>
+    <script src="{{url_for('static', filename='tubemap/FlaskApp/static/tubemap/d3-tube-map.min.js')}}"></script>
+    <link
+      href="https://fonts.googleapis.com/css?family=Hammersmith+One"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <style>
+      .tube-map {
+        width: 400px;
+        height: 200px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="tube-map" class="tube-map"></div>
+    <script src="{{url_for('static', filename='tube-init.js')}}"></script>
+  </body>
+</html>

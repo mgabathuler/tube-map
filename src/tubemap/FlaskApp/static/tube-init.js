@@ -16,15 +16,7 @@ var map = d3
     console.log(name);
   });
 
-
-var client = new XMLHttpRequest();
-client.open('GET', 'https://raw.githubusercontent.com/johnwalley/d3-tube-map/v1.5.0/example/pubs.json');
-client.onreadystatechange = function() {
-  var mapJson = client.responseText;
-}
-client.send();
-
-d3.json(mapJson).then(function (data) {
+d3.json('https://raw.githubusercontent.com/johnwalley/d3-tube-map/v1.5.0/example/pubs.json').then(function (data) {
   container.datum(data).call(map);
 
   var svg = container.select('svg');

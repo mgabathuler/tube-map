@@ -46,3 +46,9 @@ d3.json('/data/'+fn).then(function (data) {
     svg.select('g').attr('transform', event.transform.toString());
   }
 });
+
+$(document).ready(function(){
+  $("#file-selector").change(function(){
+    $("#file-selecter").submit();
+  });
+});

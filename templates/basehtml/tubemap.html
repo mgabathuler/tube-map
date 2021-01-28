@@ -18,10 +18,12 @@
     <div class="row">
       <div class="col-xs-12">
         <p>Select Tubemap: 
-          <form method="GET" action="/map">
-          <select id="file-selector" class="custom-select custom-select-sm">
+          <form id="file-selecter" method="GET" action="/map">
+          <select name= "file-selector" id="file-selector" class="custom-select custom-select-sm">
   {% for d in g.datafiles %}
-          <option value="{{ d.name|e }}">{{ d.display|e }}</option>
+          <option 
+          {% if d.name == g.loadfile %}selected{% endif %}
+          value="{{ d.name|e }}">{{ d.display|e }}</option>
   {% endfor %}
          </select>
          </form>

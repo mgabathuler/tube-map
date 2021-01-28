@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Startpage
+{% endblock %}
+
+{% block content %}
+<div class="jumbotron jumbotron-fluid" style="height:300px; background-image: url(https://placeimg.com/2700/480/tech);">
+  <div class="container-fluid">
+    <h1 class="display-4">Tubemap Demo</h1>
+    <p class="lead">A FYAYC Tubemap Demo</p>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-10">
+      <p>This example application demonstrates the Tubemap visualisation.</p>
+      <p>
+        <a class="btn btn-lg btn-default" role="button"
+          href="/map" >Show TubeMap</a>
+      </p>
+      <p>Based on:
+        <ul>
+          <li><a href="https://github.com/johnwalley/d3-tube-map">d3-tube-map</a></li>
+        </ul>
+      </p>
+    </div>
+  </div>
+</div>
+{%- endblock %}

@@ -18,4 +18,4 @@ def index_page():
 
 @app.route('/map')
 def tube_map():
-    return render_template('tubemap.html')
+    return render_template('basehtml/tubemap.html')

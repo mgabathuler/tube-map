@@ -1,6 +1,7 @@
 .azure
 
-data/
+data/*.json
+!data/demo.json
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

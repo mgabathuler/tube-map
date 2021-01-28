@@ -21,6 +21,7 @@ def index_page():
 @app.route('/map')
 def tube_map():
     g.datafiles = df.listDataFiles()
+    g.loadfile = "demo"
     if request.args.get('file-selector'):
         g.loadfile = request.args.get('file-selector')
 

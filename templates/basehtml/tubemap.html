@@ -15,16 +15,31 @@
 
 {% block content %}
   <div class="container">
-      <div class="row">
-        <div class="col-sm-3">
-          <div id="station-info" style="display:none;">
-            <h1 id="station-title"></h1>
-            <p id="station-text"></p>
-          </div>
-        </div>
-        <div class="col-sm-9">
-          <div id="tube-map" class="tube-map" style="width: 100%; height:100vh;"></div>
+    <div class="row">
+      <div class="col-xs-12">
+        <p>Select Tubemap: 
+          <form id="file-selecter" method="GET" action="/map">
+          <select name= "file-selector" id="file-selector" class="custom-select custom-select-sm">
+  {% for d in g.datafiles %}
+          <option 
+          {% if d.name == g.loadfile %}selected{% endif %}
+          value="{{ d.name|e }}">{{ d.display|e }}</option>
+  {% endfor %}
+         </select>
+         </form>
+       </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-3">
+        <div id="station-info" style="display:none;">
+          <h1 id="station-title"></h1>
+          <p id="station-text"></p>
         </div>
       </div>
-   </div>
+      <div class="col-sm-9">
+        <div id="tube-map" class="tube-map" style="width: 100%; height:100vh;"></div>
+      </div>
+    </div>
+  </div>
 {% endblock %}

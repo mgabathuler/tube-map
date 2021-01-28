@@ -12,8 +12,8 @@ var map = d3
     bottom: 40,
     left: 100,
   })
-  .on('click', function (name) {
-    console.log(name);
+  .on('click', function (label) {
+    displayStationInfo(label);
   });
 
 d3.json('https://raw.githubusercontent.com/johnwalley/d3-tube-map/v1.5.0/example/pubs.json').then(function (data) {
@@ -24,8 +24,8 @@ d3.json('https://raw.githubusercontent.com/johnwalley/d3-tube-map/v1.5.0/example
   zoom = d3.zoom().scaleExtent([0.5, 6]).on('zoom', zoomed);
 
   var zoomContainer = svg.call(zoom);
-  var initialScale = 2;
-  var initialTranslate = [100, 200];
+  var initialScale = -3;
+  var initialTranslate = [0, 0];
 
   zoom.scaleTo(zoomContainer, initialScale);
   zoom.translateTo(

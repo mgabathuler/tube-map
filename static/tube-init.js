@@ -16,7 +16,15 @@ var map = d3
     displayStationInfo(label);
   });
 
-d3.json('https://raw.githubusercontent.com/johnwalley/d3-tube-map/v1.5.0/example/pubs.json').then(function (data) {
+var urlParams = new URLSearchParams(window.location.search);
+
+if (urlParams.has("file-selector")) {
+  fn = urlParams.get("file-selector");
+} else {
+  fn = "demo";
+}
+
+d3.json('/data/'+fn).then(function (data) {
   container.datum(data).call(map);
 
   var svg = container.select('svg');

@@ -4,4 +4,4 @@ build
 
 to run locally
 
-```podman run --rm -it -p 8080:5000 tube-map```
+```podman run --rm -it -v $(pwd):/srv -p 8080:5000 tube-map flask run```
